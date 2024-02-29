@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnRandom.setOnClickListener {
             val fragment = RandomFragment.newInstance(count)
             supportFragmentManager.beginTransaction()
-                .add(R.id.fcv_random, fragment, "random_fragment")
+                .add(R.id.fcv_random, fragment)
                 .commit()
         }
 
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun removeRandomFragment() {
-        val randomFragment = supportFragmentManager.findFragmentByTag("random_fragment")
+        val randomFragment = supportFragmentManager.findFragmentById(R.id.fcv_random)
         if (randomFragment != null){
             supportFragmentManager.beginTransaction()
                 .remove(randomFragment)
