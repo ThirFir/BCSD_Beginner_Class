@@ -15,10 +15,6 @@ class RandomFragment : Fragment() {
         arguments?.getInt("count") ?: 0
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        Log.d("RandomFragment", "onSaveInstanceState")
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
