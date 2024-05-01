@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun showAlertDialog() {
         AlertDialog.Builder(this)
             .setTitle("Hello")
-            .setMessage("Hello, welcome to week5")
+            .setMessage("숫자 초기화?")
             .setPositiveButton("Ok"){ _, _ ->
                 count = 0
                 binding.tvCount.text = "0"
